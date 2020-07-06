@@ -1,0 +1,487 @@
+:root{
+    --red:#ff2e63;
+    --black:#252e34;
+    --blue:#08d9d6;
+    --white:#eaeaea;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+    overflow-x: hidden; /* No exista scroll horizontal en el eje x */
+    font-family: 'releway', sans-serif;
+}
+
+/** MENU DE NAVEGACION **/
+#header{
+    position: relative;
+    width: 100%;
+}
+.menu{
+    position: fixed; /*Que este fija el componente*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+.menu .logo-box {
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+.menu .logo-box h1 a{
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--black);
+}
+.menu .list-container{
+    margin-right: 20px;
+}
+.menu .list-container .lists{
+    display: flex;
+}
+.menu .list-container .lists li {
+    list-style: none;
+}
+.menu .list-container .lists li a{
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 15px;
+    color: var(--black);
+    border-radius: 25px;
+    font-size: 22px;
+    transition: 0.4s;
+}
+.menu .list-container .lists li a.activo{
+    color: #252e34;
+}
+.menu .list-container .lists li a:hover{
+    background: var(--red);
+    color: #fff;
+}
+
+.btn-menu > .fa-bars{
+    display: none;
+}
+/** MENU DE NAVEGACION **/
+
+/** IMG HEADER **/
+.img-header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/header.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.img-header .welcome{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.img-header .welcome h1{
+    font-size: 100px;
+    color: #fff;
+    font-weight: 200;
+}
+.img-header .welcome hr{
+    width: 400px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    margin-top: 5px;
+}
+.img-header .welcome p{
+    font-size: 30px;
+    color: #fff;
+    margin-top: 20px;  
+}
+.img-header .welcome > button{
+    width: 180px;
+    height: 55px;
+    background: var(--red);
+    border-radius: 24px;
+    border:none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+.img-header .welcome > button:hover {
+    background: var(--blue);
+}
+/** IMG HEADER **/
+
+/** ACERCA DE NOSOTROS  **/
+.acerca-de {
+  width: 100%;
+  margin-top: 120px;   
+}
+.acerca-de .info-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.acerca-de .info-container h1{
+    font-size: 60px;
+    font-weight: 400px;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.acerca-de .info-container p{
+    text-align: center;
+    font-size: 20px;
+    color: var(--black);
+    line-height: 35px;
+    margin: 10px 0px;
+}
+.acerca-de .info-container .about-gallery{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+}
+.acerca-de .info-container .about-gallery img{
+    width: calc(33.33% -10px);
+    height: 300px;
+    object-fit: cover; /*REDIMENCIONA IMAGENES LA PROPIEDAD object-fit: cover*/
+    margin: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.acerca-de .info-container .about-more{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.acerca-de .info-container .about-more > button{
+    width: 150px;
+    height: 55px;
+    background: var(--red);
+    border-radius: 24px;
+    border:none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+.acerca-de .info-container .about-more > button:hover{
+    background: var(--blue);
+}
+/** ACERCA DE NOSOTROS**/
+
+/** NUESTROS TRABAJOS**/
+.our-proyects{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/img-2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+}
+.our-proyects .deg-background{
+    position: absolute; /*SE SOBREPONE */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+
+.our-proyects .ejeZproject{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.our-proyects .container-project{
+    width: 90%;
+    margin: auto;
+    padding-top: 100px;   
+}
+.our-proyects .container-project .project-title{
+    border: 2px solid #fff;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+.our-proyects .container-project .project-title h2{
+    font-size: 40px;
+    color: #fff;
+    font-weight: normal;
+}
+.our-proyects .container-project .project-title hr{
+    background: #fff;
+    width: 50%;
+    margin: 10px auto;
+}
+.our-proyects .container-project .project-img{
+    /* width: 100%;
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-bottom: 100px; */
+}
+.our-proyects .container-project .project-img .carousel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: center;
+    margin-top: 80px;
+    padding-bottom: 100px
+}
+.our-proyects .container-project .project-img img{
+    width: 45%;
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.our-proyects .container-project .carousel .carousel-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+ 
+}
+/** NUESTROS TRABAJOS**/
+
+/** TESTIMONIOS**/
+.testimonios{
+    width: 100%;
+    margin-top: 120px;   
+}
+.testimonios .testimonios-title{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+.testimonios .testimonios-title h2{
+    font-size: 60px;
+    color: var(--black);
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.testimonios .testimonios-title hr{
+    width: 60%;
+    margin: auto;
+    height: 2px;
+    background: var(--black);
+    border: none;
+}
+.testimonios .box-testimonios{
+    width: 90%;
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.testimonios .box-testimonios .card-testimonio{
+    width: 45%;
+    margin: 20px;
+}
+.testimonios .box-testimonios .card-testimonio .card-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.testimonios .box-testimonios .card-testimonio .card-img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.testimonios .box-testimonios .testimonio-text{
+    width: 100%;
+    border: 2px solid var(--red);
+    margin-top: 30px;
+    margin-left: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 200ms;
+}
+.testimonios .box-testimonios .card-testimonio .testimonio-text h4{
+    color: var(--red);
+    font-weight: normal;
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: 200ms;
+}
+.testimonios .box-testimonios .card-testimonio .testimonio-text p{
+    font-size: 19px;
+    color: var(--black);
+    text-align: center;
+    line-height: 20px;
+    transition: 200ms;
+}
+.testimonios .box-testimonios .testimonio-text:hover{
+    border: 2px solid var(--blue);
+}
+.testimonios .box-testimonios .testimonio-text:hover h4 {
+    color: var(--blue);
+}
+/** TESTIMONIOS**/
+
+/** FOOTER**/
+.footer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img//footer.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.footer .deg-footer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+.footer .ejeZfooter{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.footer .footer-content{
+    width: 90%;
+    padding-top: 100px;
+    margin: auto;   
+}
+.footer .footer-content .footer-title{
+    width: 50%;
+    margin: auto;
+    border: 2px solid #fff;
+    padding: 10px;
+}
+.footer .footer-content .footer-title h2{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.footer .footer-content .footer-title hr{
+    width: 80%;
+    margin: auto;
+}
+.footer .footer-content .formulario-content{
+    width: 60%;
+    background: #fff;
+    border-radius: 24px;
+    border: 2px solid var(--red);
+    margin: 50px auto;
+    padding: 30px;      
+}
+.footer .footer-content .formulario-content #formulario{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer .footer-content .formulario-content #formulario label{
+    text-align: center;
+    color:var(--black);
+    font-size: 22px;
+    margin: 30px 0px 10px 0px;
+}
+.footer .footer-content .formulario-content #formulario input {
+    width: 90%;
+    height: 40px;
+    margin: auto;
+    border: 2px solid var(--red);
+    border-radius: 24px;
+    outline: none;
+    text-align: center;
+    font-size: 20px;
+    color: var(--black);
+}
+.footer .footer-content .formulario-content #formulario textarea {
+    width: 90%;
+    height: 200px;
+    margin: auto;
+    border: 2px solid var(--red);
+    border-radius: 24px;
+    outline: none; 
+    font-size: 15px;
+    color: var(--black);
+    padding: 20px;
+}
+.footer .footer-content .formulario-content #formulario .send {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 35px 0px;
+}
+.footer .footer-content .formulario-content #formulario .send button {
+    width: 160px;
+    height: 55px;
+    background: var(--red);
+    border-radius: 24px;
+    border:none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+.footer .footer-content .formulario-content #formulario .send button:hover {
+    background: var(--blue);
+}
+.footer .footer-text {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.8);
+    border-top: 4px solid var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+.footer .footer-text p {
+    color: #fff ;
+    font-size: 18px;
+} 
+/** FOOTER**/
+
