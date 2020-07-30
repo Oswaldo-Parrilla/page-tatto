@@ -15,13 +15,20 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">        
 </head>
 <body>
+
+    <!-- **IR ARRIBA -->
+    <div class="go-top">
+        <span id=""><i class="fas fa-chevron-up"></i></span>
+    </div>
     
     <!-- **MENU DE NAVEGACION** -->
     <header id="header">
         <nav class="menu">
             <div class="logo-box">
                 <h1><a href="#">Tatto Kenya Cast</a></h1>
-                <span class="btn-menu"><i class="fas fa-bars"></i></span>
+                <span class="btn-menu">
+                    <i class="fas fa-bars"></i>
+                </span>
             </div>
             <div class="list-container">
                 <ul class="lists">
@@ -42,29 +49,31 @@
                 <button id="abajo">Ver abajo</button>
             </div>
         </div>
+        <div class="skew-abajo"></div>
     </header>
     <!-- **MENU DE NAVEGACION** -->
-     <main>         
+    <main>         
     <!-- ACERCA DE NOSOTROS -->
     <section class="acerca-de">
         <div class="info-container">
             <h1>Acerca de nosotros</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>  
-        <div class="about-gallery">
-            <img src="img/img-9.jpg" alt="">
-            <img src="img/img-13.jpg" alt="">
-            <img src="img/img-17.jpg" alt="">
-        </div>
-        <div class="about-more">
-            <button>Leer mas</button>
-        </div>        
+            <div class="about-gallery">
+                <img src="img/img-9.jpg" alt="">
+                <img src="img/img-13.jpg" alt="">
+                <img src="img/img-17.jpg" alt="">
+            </div>
+            <div class="about-more">
+                <button>Leer mas</button>
+            </div>        
         </div>
     </section>
     <!-- ACERCA DE NOSOTROS -->
 
     <!-- NUESTROS TRABAJOS -->
     <section class="our-proyects">
+        <div class="skew-arriba"></div>
         <div class="deg-background"></div>
         <div class="ejeZproject"> <!--El z es porque tiene todo el contenido de las imagenes y del titular-->
             <div class="container-project">
@@ -106,6 +115,7 @@
                 </div>              
             </div>
         </div>
+        <div class="skew-abajo"></div>
     </section>
     <!-- NUESTROS TRABAJOS -->
     
@@ -153,6 +163,7 @@
     </main>
     <!-- FOOTER -->
     <footer class="footer">
+        <div class="skew-arriba"></div>
         <div class="deg-footer"></div>
         <div class="ejeZfooter">
             <div class="footer-content">
@@ -192,20 +203,6 @@
 <script src="https://kit.fontawesome.com/b4d79dfaec.js" crossorigin="anonymous"></script>
 <script src="js/app.js"></script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () =>  {
-        const elems = document.querySelectorAll('.carousel');
-        M.Carousel.init(elems, {
-            duration: 500,
-            dist: -80,
-            shift: 5,
-            numVisible: 3,
-            fullWidth: true,
-            indicators: true
-            
-        });
-    });
-</script>
 
 </body>
 </html>
